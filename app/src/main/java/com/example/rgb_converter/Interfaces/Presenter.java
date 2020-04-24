@@ -1,9 +1,9 @@
 package com.example.rgb_converter.Interfaces;
 
 public interface Presenter {
-    void UpdateRed(byte red);
+    void UpdateRed(int red);
 
-    void UpdateBlue(byte blue);
+    void UpdateBlue(int blue);
 
-    void UpdateGreen(byte green);
+    void UpdateGreen(int green);
 }

@@ -8,35 +8,33 @@ class RGBData {
         red = _red;
         blue = _blue;
         green = _green;
-
-
     }
 
-    private byte _blue;
-    private byte _red;
-    private byte _green;
+    private int _blue;
+    private int _red;
+    private int _green;
 
-    byte getBlue() {
+    int getBlue() {
         return _blue;
     }
 
-    void setBlue(byte _blue) {
+    void setBlue(int _blue) {
         this._blue = _blue;
     }
 
-    byte getRed() {
+    int getRed() {
         return _red;
     }
 
-    void setRed(byte _red) {
+    void setRed(int _red) {
         this._red = _red;
     }
 
-    byte getGreen() {
+    int getGreen() {
         return _green;
     }
 
-    void setGreen(byte _green) {
+    void setGreen(int _green) {
         this._green = _green;
     }
 }

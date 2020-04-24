@@ -16,7 +16,6 @@ import com.example.rgb_converter.Interfaces.View;
 public class MainActivity extends AppCompatActivity implements View<RGBData> {
 
     private Presenter _presenter;
-    private SeekBar _seekBarRed, _seekBarBlue, _seekBarGreen;
     private ImageView _imageView;
     private TextView _textViewHex;
 
@@ -26,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements View<RGBData> {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         _presenter = new MainActivityPresenter(this);
+        SeekBar _seekBarRed, _seekBarBlue, _seekBarGreen;
 
         // view injection
         _seekBarRed = findViewById(R.id.seekBarRed);
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View<RGBData> {
         _seekBarRed.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                _presenter.UpdateRed((byte)progress);
+                _presenter.UpdateRed(progress);
                 Log.e("", "onProgressChanged: " +progress);
             }
             @Override public void onStartTrackingTouch(SeekBar seekBar) {}
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements View<RGBData> {
         _seekBarBlue.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                _presenter.UpdateBlue((byte)progress);
+                _presenter.UpdateBlue(progress);
 
                 Log.e("", "onProgressChanged: " +progress);
             }
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements View<RGBData> {
         _seekBarGreen.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                _presenter.UpdateGreen((byte)progress);
+                _presenter.UpdateGreen(progress);
                 Log.e("", "onProgressChanged: " +progress);
             }
             @Override public void onStartTrackingTouch(SeekBar seekBar) {}
@@ -76,8 +76,8 @@ public class MainActivity extends AppCompatActivity implements View<RGBData> {
         _textViewHex.setText(hex);
 
         Log.e("", "red: " + rgbData.getRed());
-        Log.e("", "red: " + rgbData.getBlue());
-        Log.e("", "red: " + rgbData.getGreen());
+        Log.e("", "blue: " + rgbData.getBlue());
+        Log.e("", "green: " + rgbData.getGreen());
         // TODO update view thing rgb box
     }
 }

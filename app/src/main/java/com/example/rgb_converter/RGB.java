@@ -17,18 +17,18 @@ public class RGB implements Observable<RGBData> {
     }
 
     // Functions
-    void setBlue(byte _blue) {
+    void setBlue(int _blue) {
         this._rgbData.setBlue(_blue);
         notifyObservers(this._rgbData);
     }
 
-    void setRed(byte _red) {
+    void setRed(int _red) {
         this._rgbData.setRed(_red);
         notifyObservers(this._rgbData);
 
     }
 
-    void setGreen(byte _green) {
+    void setGreen(int _green) {
         this._rgbData.setGreen(_green);
         notifyObservers(this._rgbData);
     }

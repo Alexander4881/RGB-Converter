@@ -17,17 +17,17 @@ public class MainActivityPresenter implements Presenter, Observer<RGBData> {
     }
 
     @Override
-    public void UpdateRed(byte red) {
+    public void UpdateRed(int red) {
         _rgb.setRed(red);
     }
 
     @Override
-    public void UpdateBlue(byte blue) {
+    public void UpdateBlue(int blue) {
         _rgb.setBlue(blue);
     }
 
     @Override
-    public void UpdateGreen(byte green) {
+    public void UpdateGreen(int green) {
         _rgb.setGreen(green);
     }
 

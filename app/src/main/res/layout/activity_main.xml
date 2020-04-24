@@ -101,9 +101,9 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_circle_blend"
+        android:layout_width="@dimen/rectangle_w"
+        android:layout_height="@dimen/rectangle_h"
+        android:src="@drawable/ic_rectangle"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
