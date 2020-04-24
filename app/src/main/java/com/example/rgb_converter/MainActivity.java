@@ -2,13 +2,16 @@ package com.example.rgb_converter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.graphics.Color;
-import android.graphics.drawable.VectorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.rgb_converter.Interfaces.Presenter;
 import com.example.rgb_converter.Interfaces.View;
@@ -63,6 +66,17 @@ public class MainActivity extends AppCompatActivity implements View<RGBData> {
             @Override public void onStopTrackingTouch(SeekBar seekBar) {}
         });
 
+        _textViewHex.setOnClickListener(new android.view.View.OnClickListener() {
+            @Override
+            public void onClick(android.view.View v) {
+                ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                ClipData clip = ClipData.newPlainText(getString(R.string.toastCopied), _textViewHex.getText());
+                clipboard.setPrimaryClip(clip);
+
+                Toast.makeText(MainActivity.this, R.string.toastCopied, Toast.LENGTH_SHORT).show();
+
+            }
+        });
     }
 
     @Override
@@ -78,6 +92,5 @@ public class MainActivity extends AppCompatActivity implements View<RGBData> {
         Log.e("", "red: " + rgbData.getRed());
         Log.e("", "blue: " + rgbData.getBlue());
         Log.e("", "green: " + rgbData.getGreen());
-        // TODO update view thing rgb box
     }
 }
