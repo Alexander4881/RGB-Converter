@@ -69,13 +69,15 @@ public class MainActivity extends AppCompatActivity implements View<RGBData> {
     public void update(RGBData rgbData) {
 
         //(VectorDrawable)_imageView.getDrawable().setTint();
-        _imageView.setColorFilter(Color.argb(255, rgbData.getRed(), rgbData.getGreen(), rgbData.getGreen()));
+        _imageView.setColorFilter(Color.argb(255, rgbData.getRed(), rgbData.getGreen(), rgbData.getBlue()));
 
-        String hex = String.format("#%02x%02x%02x", rgbData.getRed(), rgbData.getGreen(), rgbData.getGreen());
+        String hex = String.format("#%02x%02x%02x", rgbData.getRed(), rgbData.getGreen(), rgbData.getBlue());
 
         _textViewHex.setText(hex);
 
-        Log.e("", "update called");
+        Log.e("", "red: " + rgbData.getRed());
+        Log.e("", "red: " + rgbData.getBlue());
+        Log.e("", "red: " + rgbData.getGreen());
         // TODO update view thing rgb box
     }
 }

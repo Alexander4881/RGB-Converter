@@ -29,6 +29,8 @@
             android:id="@+id/seekBarRed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:min="0"
+
             android:max="255"
 
             app:layout_constraintBottom_toTopOf="@id/seekBarBlue"
@@ -62,6 +64,8 @@
             android:id="@+id/seekBarBlue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:min="0"
+
             android:max="255"
 
             />
@@ -89,6 +93,7 @@
             android:id="@+id/seekBarGreen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:min="0"
             android:max="255" />
 
 
