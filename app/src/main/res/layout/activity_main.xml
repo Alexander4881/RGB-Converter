@@ -29,6 +29,7 @@
             android:id="@+id/seekBarRed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:max="255"
 
             app:layout_constraintBottom_toTopOf="@id/seekBarBlue"
             app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +61,10 @@
         <SeekBar
             android:id="@+id/seekBarBlue"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:max="255"
+
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -69,10 +73,10 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
 
-        app:layout_constraintTop_toBottomOf="@id/linearLayoutBlue"
         app:layout_constraintBottom_toBottomOf="@id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutBlue">
 
         <TextView
             android:id="@+id/textViewGreen"
@@ -84,7 +88,8 @@
         <SeekBar
             android:id="@+id/seekBarGreen"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:max="255" />
 
 
     </LinearLayout>
@@ -93,12 +98,12 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:src="@drawable/ic_circle_blend"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayoutGreen"/>
-
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutGreen" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
