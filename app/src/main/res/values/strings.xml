@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">RGB-Converter</string>
+
+    <string name="seekBarRed">Red</string>
+    <string name="seekBarBlue">Blue</string>
+    <string name="seekBarGreen">Green</string>
 </resources>
